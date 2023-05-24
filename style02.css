@@ -56,7 +56,7 @@ header .navigation .navigation-items a:hover:before{
 }
 
 body {
-    background-image: url(images/02.jpg);
+    background-image: url(02.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
