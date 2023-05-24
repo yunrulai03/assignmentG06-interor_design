@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LifeHouse.html</title>
+        <link rel="stylesheet" href="style1.css">
+        <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        
+    </head>
+    <body>
+
+        <header>
+            <a href="index001.html" class="brand">Life<br><span>House</span></a> 
+            <div class="menu-btn">
+                <div class="navigation">
+                    <div class="navigation-items">
+                        <a href="kanso.html">Kanso</a>
+                        <a href="chinese.html">Chinese.<span>Interior</span></a>
+                        <a href="bohemian.html">Bohemian.<span>Style</span></a>
+                        <a href="industrial01.html">Industrial.<span>Style</span></a>
+                        <a href="minimalist.html">Minimalist.<span>Style</span></a>
+                        <a href="summary.html">Summary</a>
+                        <a href="why choose us02.html">Contact.Us</a>
+                        <a href="login.html"><span class="icon" style="font-size: 40px;"><ion-icon name="person-circle"></ion-icon></span></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <section class="home">
+            <video class="video-slide active" src="images/japanese01——使用Clipchamp制作.mp4" autoplay muted loop></video>
+            <video class="video-slide" src="images/chinese01——使用Clipchamp制作.mp4" autoplay muted loop></video>
+            <video class="video-slide" src="images/bohemian——使用Clipchamp制作.mp4" autoplay muted loop></video>
+            <video class="video-slide" src="images/industrial 01——使用Clipchamp制作.mp4" autoplay muted loop></video>
+            <video class="video-slide" src="images/minimalist——使用Clipchamp制作.mp4" autoplay muted loop></video>
+            <br>
+            <br><br><br>
+            <div class="content active">
+                <h2>Kanso</h2>
+                <br>
+                <p>Japan has a unique style of interior design that is characterized by its simplicity, minimalism, and natural beauty. It is focused on creating a peaceful and calming atmosphere, promoting a sense of harmony and balance in the space. </p>
+                <a href="kanso.html">Read More.</a>
+            </div>
+
+            <div class="content">
+                <h2>Chinese<br><span>Interior</span></h2>
+                <p>Chinese design-style is unsurprisingly noted for its zen-like aesthetic and simplicity - it's about clean lines and character of shape. The key element to Chinese interiors is that spaces reflect a sense of harmony, intricate decoration mixed with a blend of warm colours.</p>
+                <a href="chinese.html">Read More.</a>
+            </div>
+            <div class="content ">
+                <h2>Bohemian<br><span>Style</span></h2>
+                <p>Boho design is a free-spirited approach to interior decorating — a style that fully embraces playful colors, textures, and patterns, embodies individual expression, and encourages “thoughtful maximalism”.</p>
+                <a href="bohemian.html">Read More.</a>
+            </div>
+            <div class="content">
+                <h2>Industrial<br><span>Style</span></h2>
+                <p>An aesthetic trend in interior design that takes cues from old factories and industrial spaces that in recent years have been converted to lofts and other living spaces.</p>
+                <a href="industrial01.html">Read More.</a>
+            </div>
+            <div class="content">
+                <h2>Minimalist<br><span>Style</span></h2>
+                <p>It's characterised by simplicity, clean lines, and a monochromatic palette with colour used as an accent. It usually combines an open floor plan, lots of light, and functional furniture, and it focuses on the shape, colour and texture of just a handful of essential elements.</p>
+                <a href="minimalist.html">Read More.</a>
+            </div>
+            <div class="slider-navigation">
+                <div class="nav-btn active"></div>
+                <div class="nav-btn "></div>
+                <div class="nav-btn "></div>
+                <div class="nav-btn "></div>
+                <div class="nav-btn "></div>
+            </div>
+        </section>
+        <script type="text/javascript" >
+            const btns = document.querySelectorAll(".nav-btn");
+            const slides = document.querySelectorAll(".video-slide");
+            const contents = document.querySelectorAll('.content');
+
+            var sliderNav = function(manual){
+                btns.forEach((btn) => {
+                    btn.classList.remove("active")
+                });
+
+                slides.forEach((slide) => {
+                    slide.classList.remove("active")
+                });
+
+                contents.forEach((content) => {
+                    content.classList.remove('active');
+                });
+
+                btns[manual].classList.add("active");
+                slides[manual].classList.add("active");
+                contents[manual].classList.add('active');
+            }
+
+            btns.forEach((btn,i) => {
+                btn.addEventListener("click",() => {
+                    sliderNav(i);
+                });
+            });
+        </script>
+        <script src="script.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+            
+    </body>
+</html>
